@@ -6,21 +6,21 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:14:36 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/15 16:55:25 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/16 08:32:29 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *string, int searchedChar)
 {
-	while (*s != '\0')
+	while (*string != '\0')
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		if (*string == (char)searchedChar)
+			return ((char *)string);
+		string++;
 	}
-	if (c == '\0')
-		return ((char *)s);
+	if (searchedChar == '\0')
+		return ((char *)string);
 	return (NULL);
 }

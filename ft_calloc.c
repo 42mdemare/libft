@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 17:06:28 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/16 08:34:35 by mdemare          ###   ########.fr       */
+/*   Created: 2024/10/16 14:21:41 by mdemare           #+#    #+#             */
+/*   Updated: 2024/10/16 15:35:28 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include "libft.h"
 
-int	ft_strncmp(const char *string1, const char *string2, size_t size)
+void	*ft_calloc( size_t elementCount, size_t elementSize)
 {
-	size_t	i;
+	void	*ptr;
+	size_t	total_size;
 
-	i = 0;
-	while ((string1[i] || string2[i]) && i < (size))
-	{
-		if (string1[i] != string2[i])
-			return (string1[i] - string2[i]);
-		i++;
-	}
-	return (0);
+	total_size = elementCount * elementSize;
+	ptr = malloc(total_size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, total_size);
+	return (ptr);
 }
+

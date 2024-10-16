@@ -6,24 +6,24 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:15:49 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/15 16:56:01 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/16 08:34:19 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *string, int searchedChar)
 {
 	const char	*last;
 
 	last = NULL;
-	while (*s != '\0')
+	while (*string != '\0')
 	{
-		if (*s == (char)c)
-			last = s;
-		s++;
+		if (*string == (char)searchedChar)
+			last = string;
+		string++;
 	}
-	if (c == '\0')
-		return ((char *)s);
+	if (searchedChar == '\0')
+		return ((char *)string);
 	return ((char *)last);
 }

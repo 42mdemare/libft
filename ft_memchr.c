@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 17:06:28 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/16 08:34:35 by mdemare          ###   ########.fr       */
+/*   Created: 2024/10/16 08:20:02 by mdemare           #+#    #+#             */
+/*   Updated: 2024/10/16 08:45:54 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <string.h>
 
-int	ft_strncmp(const char *string1, const char *string2, size_t size)
+void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*str;
 
+	str = (unsigned char *)memoryBlock;
 	i = 0;
-	while ((string1[i] || string2[i]) && i < (size))
+	while (i < size)
 	{
-		if (string1[i] != string2[i])
-			return (string1[i] - string2[i]);
+		if (str[i] == searchedChar)
+			return ((void *)(str + i));
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

@@ -6,13 +6,17 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:26:27 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/15 12:06:12 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/16 13:53:26 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+#define ELEMENT_COUNT 10
+
+void	*ft_memmove(void *dest, const void *src, size_t size)
 {
 	size_t				i;
 	unsigned char		*d;
@@ -23,14 +27,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	s = (const unsigned char *)src;
 	if (d < s)
 	{
-		while (i < n)
+		while (i < size)
 		{
 			d[i] = s[i];
 			i++;
 		}
 	}
 	else
-		while (n--)
-			d[n] = s[n];
+		while (size--)
+			d[size] = s[size];
 	return (d);
 }

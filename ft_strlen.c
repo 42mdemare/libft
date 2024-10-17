@@ -6,11 +6,11 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:59:30 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/16 08:33:02 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/17 10:01:12 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *string)
 {

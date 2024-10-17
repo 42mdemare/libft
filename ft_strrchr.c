@@ -6,11 +6,11 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:15:49 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/16 08:34:19 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/17 10:01:20 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *string, int searchedChar)
 {

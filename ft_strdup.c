@@ -6,12 +6,11 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 16:52:00 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/17 08:39:39 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/17 10:01:02 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *source)
 {

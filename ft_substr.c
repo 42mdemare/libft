@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 15:14:36 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/17 10:01:00 by mdemare          ###   ########.fr       */
+/*   Created: 2024/10/17 10:23:37 by mdemare           #+#    #+#             */
+/*   Updated: 2024/10/17 10:48:51 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *string, int searchedChar)
-{
-	while (*string != '\0')
-	{
-		if (*string == (char)searchedChar)
-			return ((char *)string);
-		string++;
-	}
-	if (searchedChar == '\0')
-		return ((char *)string);
-	return (NULL);
-}
+// char	*ft_substr(char const *s, unsigned int start, size_t len)
+// {
+	
+// }

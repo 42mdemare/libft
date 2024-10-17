@@ -6,31 +6,34 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 13:54:37 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/15 14:11:05 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/17 16:53:59 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
+	char	*s;
 	size_t	dstlen;
 	size_t	srclen;
 	size_t	i;
-	size_t	j;
+	size_t	result;
 
-	dstlen = 0;
-	srclen = 0;
-	while (dst[dstlen] != '\0')
+	s = (char *)src;
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(s);
+	i = 0;
+	if (size > dstlen)
+		result = srclen + dstlen;
+	else
+		result = srclen + size;
+	while (s[i] && (dstlen + 1) < size)
+	{
+		dst[dstlen] = s[i];
 		dstlen++;
-	while (src[srclen] != '\0')
-		srclen++;
-	if (size <= dstlen)
-		return (size + dstlen);
-	i = dstlen;
-	j = 0;
-	while (src[j] && (i + 1) < size)
-		dst[i++] = src[j++];
-	dst[i] = '\0';
-	return (dstlen + srclen);
+		i++;
+	}
+	dst[dstlen] = '\0';
+	return (result);
 }

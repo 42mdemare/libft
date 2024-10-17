@@ -6,11 +6,11 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 09:05:19 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/16 09:56:14 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/17 16:55:19 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

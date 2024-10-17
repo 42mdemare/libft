@@ -6,12 +6,11 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 18:08:16 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/16 08:31:31 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/17 10:00:57 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *pointer, int value, size_t size)
 {

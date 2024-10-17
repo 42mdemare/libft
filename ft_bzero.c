@@ -6,11 +6,11 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 21:29:03 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/17 08:42:19 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/17 10:00:25 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

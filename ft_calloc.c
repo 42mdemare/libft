@@ -6,7 +6,7 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:21:41 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/16 15:35:28 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/17 08:37:01 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,3 @@ void	*ft_calloc( size_t elementCount, size_t elementSize)
 	ft_bzero(ptr, total_size);
 	return (ptr);
 }
-

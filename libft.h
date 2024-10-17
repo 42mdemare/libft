@@ -6,7 +6,7 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:04:47 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/16 09:58:05 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/17 09:12:34 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size);
 int		ft_memcmp( const void *pointer1, const void *pointer2, size_t size);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
+char	*ft_strdup(const char *source);
 
 #endif

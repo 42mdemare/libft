@@ -1,27 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 17:06:28 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/19 16:43:12 by mdemare          ###   ########.fr       */
+/*   Created: 2024/10/19 14:44:31 by mdemare           #+#    #+#             */
+/*   Updated: 2024/10/19 14:57:24 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *string1, const char *string2, size_t size)
+static int	ft_in_set(char c, const char *set)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < size && (string1[i] || string2[i]))
+	while (*set)
 	{
-		if ((unsigned char)string1[i] != (unsigned char)string2[i])
-			return ((unsigned char)string1[i] - (unsigned char)string2[i]);
-		i++;
+		if (c == *set)
+			return (1);
+		set++;
 	}
 	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	start;
+	size_t	end;
+
+	end = 0;
+	if (!s1 || !set)
+		return (NULL);
+	start = 0;
+	while (s1[start] && ft_in_set(s1[start], set))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && ft_in_set(s1[end - 1], set))
+		end--;
+	return (ft_substr(s1, start, end - start));
 }

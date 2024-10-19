@@ -6,7 +6,7 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:14:36 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/17 10:01:00 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/19 16:46:46 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *string, int searchedChar)
 			return ((char *)string);
 		string++;
 	}
-	if (searchedChar == '\0')
+	if ((char)searchedChar == '\0')
 		return ((char *)string);
 	return (NULL);
 }

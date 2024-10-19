@@ -6,7 +6,7 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:04:47 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/17 11:08:58 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/19 17:27:27 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,10 @@ void	*ft_calloc( size_t elementCount, size_t elementSize);
 char	*ft_strdup(const char *source);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif

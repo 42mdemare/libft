@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-#define ELEMENT_COUNT 10
-
 void	*ft_memmove(void *dest, const void *src, size_t size)
 {
 	unsigned char		*d;

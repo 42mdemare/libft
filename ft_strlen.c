@@ -1,23 +1,12 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 15:59:30 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/17 10:01:12 by mdemare          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-size_t	ft_strlen(const char *string)
+size_t ft_strlen(const char *s)
 {
-	int	i;
+    size_t i;
 
-	i = 0;
-	while (string[i])
-		i++;
-	return (i);
+    i = 0;
+    while (s[i] != '\0')
+        i++;
+    return (i);
 }

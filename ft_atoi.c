@@ -1,41 +1,23 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 09:52:03 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/19 17:22:59 by mdemare          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_atoi(const char *nptr)
+int ft_atoi(const char *str)
 {
-	long	i;
-	long	j;
-	long	number;
-	int		signe;
+    int result;
+    int sign;
 
-	i = 0;
-	j = 0;
-	number = 0;
-	signe = 1;
-	while ((nptr[i] == ' ' || (nptr[i] >= '\t' && nptr[i] <= '\r')))
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
-	{
-		if (nptr[i++] == '-')
-			signe = -1;
-	}
-	while (nptr[i] == '0')
-		i++;
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		number = number * 10 + (nptr[i++] - '0');
-		j++;
-	}
-	return (number * signe);
+    result = 0;
+    sign = 1;
+    while (*str == ' ' || (*str >= 9 && *str <= 13))
+        str++;
+    if (*str == '-' || *str == '+')
+    {
+        if (*str == '-')
+            sign = -1;
+        str++;
+    }
+    while (*str >= '0' && *str <= '9')
+    {
+        result = result * 10 + (*str - '0');
+        str++;
+    }
+    return (result * sign);
 }

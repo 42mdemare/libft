@@ -6,7 +6,7 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 15:00:43 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/19 19:47:40 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/20 16:22:55 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ static int	ft_fill_split(char **split, char const *s, char c)
 	{
 		if (s[i] != c && start == -1)
 			start = i;
-		else if ((s[i] == c || !s[i + 1]) && start != -1)
+		if ((s[i + 1] == '\0' || s[i] == c) && start != -1)
 		{
 			if (s[i] == c)
 				split[j] = ft_substr(s, start, i - start);

@@ -1,41 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 09:26:27 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/20 11:16:35 by mdemare          ###   ########.fr       */
+/*   Created: 2024/10/20 11:16:11 by mdemare           #+#    #+#             */
+/*   Updated: 2024/10/20 17:12:38 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t size)
+t_list	*ft_lstnew(void *content)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
-	size_t				i;
+	t_list	*new_element;
 
-	if (dest == src)
-		return (dest);
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
-	if (d > s)
-	{
-		i = size;
-		while (i-- > 0)
-			d[i] = s[i];
-	}
-	else
-	{
-		i = 0;
-		while (i < size)
-		{
-			d[i] = s[i];
-			i++;
-		}
-	}
-	return (dest);
+	new_element = (t_list *)malloc(sizeof(t_list));
+	if (!new_element)
+		return (NULL);
+	new_element->content = content;
+	new_element->next = NULL;
+	return (new_element);
 }

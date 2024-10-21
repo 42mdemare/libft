@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/21 09:49:28 by mdemare           #+#    #+#             */
+/*   Updated: 2024/10/21 12:14:49 by mdemare          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdio.h>
 #include <string.h>
@@ -6,84 +18,93 @@
 #include <assert.h>
 #include <stdint.h>
 
-void	testIs();
-void	testMemset();
-void	testBzero();
-void	testMemcpy();
-void	testMemmove();
-void	testStrlcpy();
-void	testStrlcat();
-void	testStrchr();
-void	testStrrchr();
-void	testStrncmp();
-void	testMemchr();
-void	testMemcmp();
-void	testStrnstr();
-void	testAtoi();
-void	testMalloc();
-void	testStrdup();
+void	testis(void);
+void	testmemset(void);
+void	testbzero(void);
+void	testmemcpy(void);
+void	testmemmove(void);
+void	teststrlcpy(void);
+void	teststrlcat(void);
+void	teststrchr(void);
+void	teststrrchr(void);
+void	teststrncmp(void);
+void	testmemchr(void);
+void	testmemcmp(void);
+void	teststrnstr(void);
+void	testatoi(void);
+void	testmalloc(void);
+void	teststrdup(void);
 
-void	testSubStr();
-void	testStrjoin();
-void	teststrtrim();
-void	testSplit();
-void	testItoi();
-void	testStrmapi();
-void	testStriteri();
-void	testPutchar_fd();
-void	testPutstr_fd();
-void	testPutendl_fd();
-void	testPutnbr_fd();
+void	testsubstr(void);
+void	teststrjoin(void);
+void	teststrtrim(void);
+void	testsplit(void);
+void	testitoi(void);
+void	teststrmapi(void);
+void	teststriteri(void);
+void	testputchar_fd(void);
+void	testputstr_fd(void);
+void	testputendl_fd(void);
+void	testputnbr_fd(void);
 
-void	testLstnew();
-void	testLstadd_front();
-void	testLstsize();
-void	testLstlast();
-void	testLstadd_back();
+void	testlstnew(void);
+void	testlstadd_front(void);
+void	testlstsize(void);
+void	testlstlast(void);
+void	testlstadd_back(void);
+void	testlstdelone(void);
+void	testlstclear(void);
+void	testlstiter(void);
+// void	testlstmap(void);
 
 int	main(void)
 {
 	char	*teststrlen = "teststrlen";
-	testIs();
+	
+	testis();
 	printf("%s = strlen: %lu\n\n", teststrlen, ft_strlen(teststrlen));
-	testMemset();
-	testBzero();
-	testMemcpy();
-	testMemmove();
-	testStrlcpy();
-	testStrlcat();
+	testmemset();
+	testbzero();
+	testmemcpy();
+	testmemmove();
+	teststrlcpy();
+	teststrlcat();
 	printf("toupper = %c\n\n", ft_toupper('c'));
 	printf("tolower = %c\n\n", ft_tolower('C'));
-	testStrchr();
-	testStrrchr();
-	testStrncmp();
-	testMemchr();
-	testMemcmp();
-	testStrnstr();
-	testAtoi();
-	testMalloc();
-	testStrdup();
-
-	testSubStr();
-	testStrjoin();
+	teststrchr();
+	teststrrchr();
+	teststrncmp();
+	testmemchr();
+	testmemcmp();
+	teststrnstr();
+	testatoi();
+	testmalloc();
+	teststrdup();
+/* supp */
+	testsubstr();
+	teststrjoin();
 	teststrtrim();
-	testSplit();
-	testItoi();
-	testStrmapi();
-	testStriteri();
-	testPutchar_fd();
-	testPutstr_fd();
-	testPutendl_fd();
-	testPutnbr_fd();
-
-	testLstnew();
-	testLstadd_front();
-	testLstsize();
-	testLstlast();
-	testLstadd_back();
+	testsplit();
+	testitoi();
+	teststrmapi();
+	teststriteri();
+	testputchar_fd();
+	testputstr_fd();
+	testputendl_fd();
+	testputnbr_fd();
+/* bonus */
+	testlstnew();
+	testlstadd_front();
+	testlstsize();
+	testlstlast();
+	testlstadd_back();
+	testlstdelone();
+	testlstclear();
+	testlstiter();
+	// testlstmap();
 }
 
-void	testIs()
+void	testis(void)
 {
 	int		alpha = 'a';
 	int		num = '1';
@@ -113,10 +134,11 @@ void	testIs()
 		printf("%c %s", print, "no print\n\n");
 }
 
-void	testMemset()
+void	testmemset(void)
 {
 	char	testmemset[] = "testmemset";
 	char	testmemset2[] = "testmemset";
+	
 	ft_memset(testmemset, '*', 5);
 	printf("ft_memset = %s\n", testmemset);
 	memset(testmemset2, '*', 5);
@@ -124,10 +146,11 @@ void	testMemset()
 	printf("\n");
 }
 
-void	testBzero()
+void	testbzero(void)
 {	printf("ft_bzero before = ");
 	int testbzero[10]   = {7, 7, 7, 7, 7, 7, 7, 7, 7, 7};
 	int	pos = 0;
+	
 	while (pos < 10)
 	{
 		printf("%d: %d ", (pos + 1), testbzero[pos]);
@@ -144,7 +167,7 @@ void	testBzero()
 	printf("\n\n");
 }
 
-void	testMemcpy()
+void	testmemcpy(void)
 {
 	char	memcpyDest[] = "Hello World";
 	char	*memcpySrc = "Yoooo";
@@ -153,33 +176,36 @@ void	testMemcpy()
 	size_t size = 5;
 	char *result = ft_memcpy(memcpyDest, memcpySrc, size);
 	char *result2 = memcpy(memcpyDest2, memcpySrc2, size);
+	
 	printf("ft_memcpy = %s \n", result);
 	printf("memcpy = %s \n\n", result2);
 }
 
-void	testMemmove()
+void	testmemmove(void)
 {
 	size_t size = 10;
 	char	memmoveDest[] = "memmoveDest";
 	char	memmoveSrc[] = "memmoveSrc";
 	char	memmoveDest2[] = "memmoveDest";
 	char	memmoveSrc2[] = "memmoveSrc";
+	
 	ft_memmove(memmoveDest, memmoveSrc, size);
 	printf("ft_memmove = %s \n", memmoveDest);
 	memmove(memmoveDest2, memmoveSrc2, size);
 	printf("memmove = %s \n\n", memmoveDest);
 }
 
-void	testStrlcpy()
+void	teststrlcpy(void)
 {
 	size_t size = 10;
 	char	strlcpyDest[] = "strlcpyDest";
 	char	strlcpySrc[] = "strlcpySrc";
+	char src[] = "coucou";
+	char dest[10];
+
 	printf("ft_strlcpy = %zu \n", ft_strlcpy(strlcpyDest, strlcpySrc, size));
 	printf("strlcpy = %zu \n\n", strlcpy(strlcpyDest, strlcpySrc, size));
 
-	char src[] = "coucou";
-	char dest[10]; 
 	memset(dest, 'A', 10);
 	printf("dest = %s", dest);
 	printf("ft_strlcpy2 = %zu , len = %lu, dest[0] = %c\n",
@@ -195,23 +221,25 @@ void	testStrlcpy()
 		strlcpy(dest, src, 1), strlen(src), dest[0], dest[1]);
 }
 
-void	testStrlcat()
+void	teststrlcat(void)
 {
 	size_t size = 14;
 	char	strlcatDest[] = "strlcatDest";
 	char	strlcatSrc[] = "strlcatSrc";
 	char	strlcatDest2[] = "strlcatDest";
 	char	strlcatSrc2[] = "strlcatSrc";
+	
 	printf("ft_strlcat = %zu \n", ft_strlcat(strlcatDest, strlcatSrc, size));
 	printf("strlcat = %zu \n\n", strlcat(strlcatDest2, strlcatSrc2, size));
 }
 
-void	testStrchr()
+void	teststrchr(void)
 {
 	const	char *strstrchr = "test";
 	char	cstrchr = 't';
 	char	*resultstrchr = ft_strchr(strstrchr, cstrchr);
 	char	*resultstrchr2 = ft_strchr(strstrchr, cstrchr);
+	
 	printf("ft_strchr = char : %c first pos: %ld in : %s\n", 
 		cstrchr, resultstrchr - strstrchr, strstrchr);
 
@@ -222,12 +250,13 @@ void	testStrchr()
 	printf("strchr = %s\n\n", resultstrchr2);
 }
 
-void	testStrrchr()
+void	teststrrchr(void)
 {
 	const	char *strstrrchr = "test";
 	char	cstrrchr = 't';
 	char	*resultstrrchr = ft_strrchr(strstrrchr, cstrrchr);
 	char	*resultstrrchr2 = ft_strrchr(strstrrchr, cstrrchr);
+	
 	printf("ft_strrchr = char : %c last pos: %ld in : %s\n", 
 		cstrrchr, resultstrrchr - strstrrchr, strstrrchr);
 
@@ -238,19 +267,20 @@ void	testStrrchr()
 	printf("strrchr = %s\n\n", resultstrrchr2);
 }
 
-void	testStrncmp()
+void	teststrncmp(void)
 {
 	size_t	n = 4;
 	printf("ft_strncmp = %d\n", ft_strncmp("test", "t", n));
 	printf("strncmp = %d\n\n", strncmp("test", "t", n));
 }
 
-void	testMemchr()
+void	testmemchr(void)
 {
 	const	char *strmemchr = "test";
 	int	intmemchr = 'e';
 	size_t	sizememchr = 4;
 	char	*resultmemchr = ft_memchr(strmemchr, intmemchr, sizememchr);
+	
 	printf("ft_memchr = char : %c first pos: %ld in : %s\n", 
 		intmemchr, resultmemchr - strmemchr, strmemchr);
 
@@ -258,30 +288,31 @@ void	testMemchr()
 	printf("memchr = %p\n\n",memchr(strmemchr, intmemchr, sizememchr));
 }
 
-void	testMemcmp()
+void	testmemcmp(void)
 {
 	size_t	sizememcmp = 4;
 	printf("ft_memcmp = %d\n", ft_memcmp("test", "t", sizememcmp));
 	printf("memcmp = %d\n\n", memcmp("test", "t", sizememcmp));
 }
 
-void	testStrnstr()
+void	teststrnstr(void)
 {
 	const	char *big = "hello world";
 	const	char *little = "lo";
+	
 	size_t	sizestrnstr = -1;
 	printf("ft_strnstr = %s \n", ft_strnstr(big, little, sizestrnstr));
 	printf("strnstr = %s \n\n", strnstr(big, little, sizestrnstr));
 }
 
-void	testAtoi()
+void	testatoi(void)
 {
 	char	*str = "\t\n\r\v1474899999999999\n\t\v\f\r+101";
 	printf("resultat ft_atoi = %d\n", ft_atoi(str));
 	printf("resultat atoi = %d\n\n", atoi(str));
 }
 
-void	testMalloc()
+void	testmalloc(void)
 {
 	int	i;
 	int	*pointer;
@@ -305,17 +336,17 @@ void	testMalloc()
 	free(pointer);
 }
 
-void	testStrdup()
+void	teststrdup(void)
 {
 	const char	*original = "Hello World.";
 	char		*copy = ft_strdup(original);
 
-	printf( "testStrdup original = %s\n", original );
- 	printf( "testStrdup copy = %s\n\n", copy);
+	printf( "teststrdup original = %s\n", original );
+ 	printf( "teststrdup copy = %s\n\n", copy);
 	free( copy );
 }
 
-void	testSubStr()
+void	testsubstr(void)
 {
 	char *str = "Hello, World!";
 	char *result;
@@ -357,25 +388,27 @@ void	testSubStr()
 	}
 }
 
-void	testStrjoin()
+void	teststrjoin(void)
 {
 	char *s1 = "Hello, ";
 	char *s2 = "World!";
 	char *result = ft_strjoin(s1, s2);
+	
 	printf("strjoin s1 = %s, s2 = %s res= %s\n\n", s1, s2, result);
 	free(result);
 }
 
-void	teststrtrim()
+void	teststrtrim(void)
 {
 	char	*s1 = "   Hello, World!  ";
 	char	*set = " ";
 	char	*result = ft_strtrim(s1, set);
+	
 	printf("strtrim s1 = %s, set = \"%s\" res= %s\n\n", s1, set, result);
 	free(result);
 }
 
-void	testSplit()
+void	testsplit(void)
 {
 	char	**result;
 	char	str[] = "hello,world,this,is,a,test";
@@ -425,10 +458,11 @@ void	testSplit()
 
 }
 
-void	testItoi()
+void	testitoi(void)
 {
 	int		n = -1505;
 	char	*result = ft_itoa(n);
+	
 	printf("n = %d, result = %s\n\n", n, result);
 	free(result);
 }
@@ -439,11 +473,12 @@ char	ft_toupper_test(unsigned int i, char c)
 	return (ft_toupper(c));
 }
 
-void	testStrmapi()
+void	teststrmapi(void)
 {
 	char	*s1 = "Hello, World!";
 	char	*result = ft_strmapi(s1, ft_toupper_test);
-	printf("testStrmapi : s1 = %s, result = %s\n\n", s1, result);
+	
+	printf("teststrmapi : s1 = %s, result = %s\n\n", s1, result);
 	free(result);
 }
 
@@ -454,16 +489,17 @@ void	ft_tolower_test(unsigned int i, char *c)
 		*c = ft_tolower(*c);
 }
 
-void	testStriteri()
+void	teststriteri(void)
 {
 	char	*s1 = "Hello, World!";
 	char	*s2 = ft_strdup(s1);
+	
 	ft_striteri(s2, ft_tolower_test);
-	printf("testStriteri : s1 = %s, result = %s\n\n", s1, s2);
+	printf("teststriteri : s1 = %s, result = %s\n\n", s1, s2);
 	free(s2);
 }
 
-void	testPutchar_fd()
+void	testputchar_fd(void)
 {
 	printf("test ft_putchar_fd :\n");
 	char	c = 'c';
@@ -471,7 +507,7 @@ void	testPutchar_fd()
 	printf("\n\n");
 }
 
-void	testPutstr_fd()
+void	testputstr_fd(void)
 {
 	printf("test ft_putstr_fd :\n");
 	char	c[] = "ft_putstr_fd";
@@ -479,7 +515,7 @@ void	testPutstr_fd()
 	printf("\n\n");
 }
 
-void	testPutendl_fd()
+void	testputendl_fd(void)
 {
 	printf("test ft_putendl_fd :\n");
 	char	c[] = "ft_putendl_fd";
@@ -487,7 +523,7 @@ void	testPutendl_fd()
 	printf("\n");
 }
 
-void	testPutnbr_fd()
+void	testputnbr_fd(void)
 {
 	printf("test ft_putnbr_fd :\n");
 	int	nb = -2147483648;
@@ -495,9 +531,9 @@ void	testPutnbr_fd()
 	printf("\n\n");
 }
 
-void	testLstnew()
+void	testlstnew(void)
 {
-	char *content = "Hello, World!";
+	char	*content = "Hello, World!";
 	t_list *node;
 
 	node = ft_lstnew(content);
@@ -516,7 +552,7 @@ void	testLstnew()
 	printf("\n");
 }
 
-void	testLstadd_front()
+void	testlstadd_front(void)
 {
 	t_list	*list;
 	t_list	*new_elem;
@@ -529,11 +565,11 @@ void	testLstadd_front()
 		printf("OK: Element added at the front\n");
 	else
 		printf("Error: Element not added correctly\n");
-
-	free(new_elem);	
+	free(new_elem);
+	printf("\n");
 }
 
-void	testLstsize()
+void	testlstsize(void)
 {
 	t_list	*list;
 	int		size;
@@ -553,9 +589,10 @@ void	testLstsize()
 		printf("Error: Size is incorrect\n");
 	free(new_elem);
 	free(new_elem2);
+	printf("\n");
 }
 
-void	testLstlast()
+void	testlstlast(void)
 {
 	t_list	*list;
 	t_list	*last;
@@ -572,7 +609,7 @@ void	testLstlast()
 	free(last);
 }
 
-void	testLstadd_back()
+void	testlstadd_back(void)
 {
 	t_list	*list;
 	t_list	*new_elem;
@@ -587,6 +624,101 @@ void	testLstadd_back()
 		printf("Error: Element not added correctly\n");
 	free(list);
 	free(new_elem);
+	printf("\n");
 }
 
-//cc -Wall -Wextra -Werror  *.c -lbsd
+void	testlstdelone(void)
+{
+	t_list	*node = malloc(sizeof(t_list));
+	
+	if (node)
+	{
+		node->content = malloc(10 * sizeof(char));
+		if (!node->content)
+		{
+			free(node);
+		}
+		ft_lstdelone(node, free);
+	}
+}
+
+void	testlstclear(void)
+{
+	t_list	*lst;
+	t_list	*new_elem;
+	char	*str;
+
+	lst = NULL;
+	str = strdup("first");
+	new_elem = ft_lstnew(str);
+	ft_lstadd_back(&lst, new_elem);
+
+	str = strdup("second");
+	new_elem = ft_lstnew(str);
+	ft_lstadd_back(&lst, new_elem);
+
+	ft_lstclear(&lst, free);
+
+	if (lst == NULL)
+		printf("testlstclear: OK\n");
+	else
+		printf("testlstclear: KO\n");
+	printf("\n");
+}
+
+
+void	print_content(void *content)
+{
+	printf("%s\n", (char *)content);
+}
+
+void	testlstiter(void)
+{
+	t_list	*elem1 = ft_lstnew("Hello");
+	t_list	*elem2 = ft_lstnew("World");
+	t_list	*elem3 = ft_lstnew("42");
+
+	elem1->next = elem2;
+	elem2->next = elem3;
+
+	ft_lstiter(elem1, print_content);
+
+	free(elem1);
+	free(elem2);
+	free(elem3);
+}
+
+
+void	*add_suffix(void *content)
+{
+	char	*new_str;
+	char	*suffix = "_suffix";
+
+	new_str = malloc(strlen(content) + strlen(suffix) + 1);
+	if (!new_str)
+		return (NULL);
+	strcpy(new_str, (char *)content);
+	strcat(new_str, suffix);
+	return (new_str);
+}
+
+void	testlstmap(void)
+{
+	t_list	*elem1 = ft_lstnew(strdup("hello"));
+	t_list	*elem2 = ft_lstnew(strdup("world"));
+	t_list	*elem3 = ft_lstnew(strdup("42"));
+
+	elem1->next = elem2;
+	elem2->next = elem3;
+
+	t_list	*new_list = ft_lstmap(elem1, &add_suffix, &free);
+	t_list	*tmp = new_list;
+	while (tmp)
+	{
+		printf("%s\n", (char *)tmp->content);
+		tmp = tmp->next;
+	}
+	free(new_list);
+	ft_lstclear(&elem1, &free);
+}
+//cc -g -Wall -Wextra -Werror  *.c -lbsd

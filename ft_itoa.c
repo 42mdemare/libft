@@ -6,11 +6,11 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 15:07:20 by mdemare           #+#    #+#             */
-/*   Updated: 2024/10/19 16:42:31 by mdemare          ###   ########.fr       */
+/*   Updated: 2024/10/21 12:24:24 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	ft_numlen(int n)
 {

@@ -6,7 +6,7 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 12:58:26 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/07 13:20:46 by mdemare          ###   ########.fr       */
+/*   Updated: 2025/03/07 22:51:17 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,27 @@ double	ft_sqrt(double number)
 		guess = (guess + number / guess) / 2;
 	}
 	return (guess);
+}
+
+/*
+** Computes the power of a base raised to an exponent.
+** If exp < 0, returns 1.0 / (base^|exp|).
+** If exp == 0, returns 1.
+** Uses iterative multiplication for efficiency.
+*/
+double	ft_pow(double base, int exp)
+{
+	double	result;
+
+	if (exp < 0)
+		return (1.0 / ft_pow(base, -exp));
+	result = 1.0;
+	while (exp > 0)
+	{
+		result *= base;
+		exp--;
+	}
+	return (result);
 }
 
 /* Clamps a value between min and max */

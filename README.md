@@ -211,6 +211,7 @@ typedef struct s_light
 
 ### Mathématiques (`ft_math.c`)
 - `ft_sqrt(double number)` : Calcule la racine carrée d'un nombre.
+- `ft_pow(double base, int exp))` : Calcule la puissance d'une base élevée à un exposant.
 - `ft_clamp(double value, double min, double max)` : Contraint une valeur entre un minimum et un maximum.
 - `ft_fabs(double x)` : Retourne la valeur absolue d'un nombre flottant.
 - `ft_lerp(double a, double b, double t)` : Effectue une interpolation linéaire entre deux valeurs.

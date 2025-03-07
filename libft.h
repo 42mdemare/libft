@@ -6,7 +6,7 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:04:47 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/07 14:28:08 by mdemare          ###   ########.fr       */
+/*   Updated: 2025/03/07 23:11:16 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,6 +180,7 @@ typedef struct s_vertex
 
 // ft_math.c
 double			ft_sqrt(double number);
+double			ft_pow(double base, int exp);
 double			ft_clamp(double value, double min, double max);
 double			ft_fabs(double x);
 double			ft_lerp(double a, double b, double t);

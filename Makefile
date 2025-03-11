@@ -6,14 +6,14 @@ CFLAGS += -c -g -Wall -Wextra -Werror -I$(INCLUDES_DIR)
 SRCS_DIR = src/
 
 SRCS_MLX_DIR = ft_mlx/
-SRCS_MLX =  ft_light.c ft_math.c ft_matrix4_rotate.c ft_matrix4.c ft_ray_object.c ft_ray.c ft_vector2_calc.c ft_vector2.c \
+SRCS_MLX =  ft_light.c ft_math.c ft_matrix4_rotate.c ft_matrix4.c ft_ray_object.c ft_ray.c ft_vector_calc.c ft_vector.c \
 			ft_vector3_calc.c ft_vector3.c ft_mlx_pixel_put.c
 
 SRCS_FREE_DIR = ft_free/
 SRCS_FREE = ft_free_var.c ft_free_tab.c \
 
 SRCS_IS_DIR = ft_is/
-SRCS_IS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_isspace.c  ft_isnumeric.c \
+SRCS_IS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_isspace.c ft_isnumeric.c \
 
 SRCS_STR_DIR = ft_str/
 SRCS_STR = ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c \
@@ -29,7 +29,7 @@ SRCS_STR = ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c \
 
 SRCS_TO_DIR = ft_to/
 SRCS_TO = ft_atol.c ft_atoi.c ft_itoa.c ft_tolower.c ft_toupper.c \
-		  ft_hex_to_uint.c ft_int_to_rgb.c \
+		  ft_hex_to_uint.c ft_int_to_rgb.c ft_color_to_hex.c ft_color_from_hex.c \
 
 SRCS_MEM_DIR = ft_mem/
 SRCS_MEM = ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c \
@@ -49,9 +49,9 @@ SRCS_FT_PRINTF = ft_print_char.c ft_print_hex.c ft_print_nbr.c ft_print_str.c \
 SRCS_GET_NEXT_LINE_DIR = get_next_line/
 SRCS_GET_NEXT_LINE = get_next_line.c get_next_line_utils.c \
 
-SRCS_FILES = $(addprefix $(SRCS_MLX_DIR), $(SRCS_MLX))
-SRCS_FILES = $(addprefix $(SRCS_FREE_DIR), $(SRCS_FREE))
-SRCS_FILES = $(addprefix $(SRCS_IS_DIR), $(SRCS_IS))
+SRCS_FILES += $(addprefix $(SRCS_MLX_DIR), $(SRCS_MLX))
+SRCS_FILES += $(addprefix $(SRCS_FREE_DIR), $(SRCS_FREE))
+SRCS_FILES += $(addprefix $(SRCS_IS_DIR), $(SRCS_IS))
 SRCS_FILES += $(addprefix $(SRCS_STR_DIR), $(SRCS_STR))
 SRCS_FILES += $(addprefix $(SRCS_TO_DIR), $(SRCS_TO))
 SRCS_FILES += $(addprefix $(SRCS_MEM_DIR), $(SRCS_MEM))

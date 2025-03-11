@@ -6,7 +6,7 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 13:10:43 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/07 13:39:24 by mdemare          ###   ########.fr       */
+/*   Updated: 2025/03/08 02:22:19 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_ray_intersects_plane(t_ray ray, t_plane plane, double *t)
 	double		denom;
 	t_vector3	p0l0;
 
-	denom = ft_vec_dot(plane.normal, ray.direction);
+	denom = ft_vec3_dot(plane.normal, ray.direction);
 	if (ft_fabs(denom) < 1e-6)
 		return (0);
 	p0l0 = ft_vec3_sub(plane.point, ray.origin);

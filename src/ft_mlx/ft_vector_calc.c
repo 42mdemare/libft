@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vector2_calc.c                                  :+:      :+:    :+:   */
+/*   ft_vector_calc.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,9 +13,9 @@
 #include "../../libft.h"
 
 /* Adds two 2D vectors */
-t_vector2	ft_vec2_add(t_vector2 a, t_vector2 b)
+t_vector	ft_vec_add(t_vector a, t_vector b)
 {
-	t_vector2	res;
+	t_vector	res;
 
 	res.x = a.x + b.x;
 	res.y = a.y + b.y;
@@ -23,9 +23,9 @@ t_vector2	ft_vec2_add(t_vector2 a, t_vector2 b)
 }
 
 /* Subtracts two 2D vectors */
-t_vector2	ft_vec2_sub(t_vector2 a, t_vector2 b)
+t_vector	ft_vec_sub(t_vector a, t_vector b)
 {
-	t_vector2	res;
+	t_vector	res;
 
 	res.x = a.x - b.x;
 	res.y = a.y - b.y;
@@ -33,15 +33,15 @@ t_vector2	ft_vec2_sub(t_vector2 a, t_vector2 b)
 }
 
 /* Computes the dot product of two 2D vectors */
-double	ft_vec2_dot(t_vector2 a, t_vector2 b)
+double	ft_vec_dot(t_vector a, t_vector b)
 {
 	return (a.x * b.x + a.y * b.y);
 }
 
 /* Multiplies a 2D vector by a scale */
-t_vector2	ft_vec2_scale(t_vector2 v, double scale)
+t_vector	ft_vec_scale(t_vector v, double scale)
 {
-	t_vector2	res;
+	t_vector	res;
 
 	res.x = v.x * scale;
 	res.y = v.y * scale;
@@ -49,7 +49,7 @@ t_vector2	ft_vec2_scale(t_vector2 v, double scale)
 }
 
 /* Computes the cross product of two 2D vectors */
-double	ft_vec2_cross(t_vector2 a, t_vector2 b)
+double	ft_vec_cross(t_vector a, t_vector b)
 {
 	return (a.x * b.y - a.y * b.x);
 }

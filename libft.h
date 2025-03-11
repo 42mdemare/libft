@@ -6,7 +6,7 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:04:47 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/07 23:11:16 by mdemare          ###   ########.fr       */
+/*   Updated: 2025/03/10 21:16:26 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,6 +158,8 @@ typedef struct s_color
 }			t_color;
 
 t_color			ft_int_to_rgb(unsigned int color);
+void			ft_color_from_hex(t_color *color, unsigned int hex);
+unsigned int	ft_color_to_hex(t_color *color);
 
 //hex_to_uint
 unsigned int	ft_hex_to_uint(const char *hex);
@@ -198,24 +200,24 @@ t_vector3		ft_vec3_scale(t_vector3 v, double scale);
 double			ft_vec3_dot(t_vector3 a, t_vector3 b);
 
 /* Structure for a 2D vector */
-typedef struct s_vector2
+typedef struct s_vector
 {
 	double	x;
 	double	y;
-}	t_vector2;
+}	t_vector;
 
-//ft_vector2.c
-t_vector2		ft_vec2_create(double x, double y, double z);
-t_vector2		ft_vec2_normalize(t_vector2 v);
-t_vector2		ft_vec2_perp(t_vector2 v);
-double			ft_vec2_length(t_vector2 v);
+//ft_vector.c
+t_vector		ft_vec_create(double x, double y);
+t_vector		ft_vec_normalize(t_vector v);
+t_vector		ft_vec_perp(t_vector v);
+double			ft_vec_length(t_vector v);
 
-// ft_vector2_calc.c
-t_vector2		ft_vec2_add(t_vector2 a, t_vector2 b);
-t_vector2		ft_vec2_sub(t_vector2 a, t_vector2 b);
-t_vector2		ft_vec2_cross(t_vector2 a, t_vector2 b);
-t_vector2		ft_vec2_scale(t_vector2 v, double scale);
-double			ft_vec2_dot(t_vector2 a, t_vector2 b);
+// ft_vector_calc.c
+t_vector		ft_vec_add(t_vector a, t_vector b);
+t_vector		ft_vec_sub(t_vector a, t_vector b);
+double			ft_vec_cross(t_vector a, t_vector b);
+t_vector		ft_vec_scale(t_vector v, double scale);
+double			ft_vec_dot(t_vector a, t_vector b);
 
 //ft_matrix4.c
 /* Structure for a 4x4 matrix */
@@ -294,5 +296,15 @@ typedef struct s_img_data
 }	t_img_data;
 
 void			ft_mlx_pixel_put(t_img_data *data, int x, int y, int color);
+
+typedef struct s_draw
+{
+	int		dx;
+	int		dy;
+	int		sx;
+	int		sy;
+	int		err;
+	int		color;
+}	t_draw;
 
 #endif

@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mlx_pixel_put.c                                 :+:      :+:    :+:   */
+/*   ft_color_to_hex.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 17:43:08 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/08 02:27:50 by mdemare          ###   ########.fr       */
+/*   Created: 2025/03/10 21:17:20 by mdemare           #+#    #+#             */
+/*   Updated: 2025/03/10 21:28:19 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-void	ft_mlx_pixel_put(t_img_data *data, int x, int y, int color)
+unsigned int	ft_color_to_hex(t_color *color)
 {
-	char	*dst;
-
-	dst = data->addr + (y * data->line_length + x * (data->bits_per_pixel / 8));
-	*(unsigned int *)dst = color;
+	return ((color->a << 24) | (color->r << 16)
+		| (color->g << 8) | color->b);
 }

@@ -6,7 +6,7 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:04:47 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/10 21:16:26 by mdemare          ###   ########.fr       */
+/*   Updated: 2025/03/11 22:33:19 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -286,13 +286,15 @@ double			ft_compute_lighting(t_vector3 point,
 					t_vector3 normal, t_light light);
 
 // ft_mlx_pixel_put.c
-typedef struct s_img_data
+typedef struct s_img_data 
 {
 	void	*img;
 	char	*addr;
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
+	int		width;
+	int		height;
 }	t_img_data;
 
 void			ft_mlx_pixel_put(t_img_data *data, int x, int y, int color);
@@ -306,5 +308,7 @@ typedef struct s_draw
 	int		err;
 	int		color;
 }	t_draw;
+
+double			ft_rand(void);
 
 #endif

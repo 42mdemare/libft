@@ -208,6 +208,8 @@ typedef struct s_light
 - Représente une source de lumière dans une scène 3D.
 
 ---
+### Aléatoire (`ft_rand.c`)
+- `double	ft_rand(void)` : Génère un nombre pseudo aléatoire.
 
 ### Mathématiques (`ft_math.c`)
 - `ft_sqrt(double number)` : Calcule la racine carrée d'un nombre.

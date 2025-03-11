@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mlx_pixel_put.c                                 :+:      :+:    :+:   */
+/*   ft_rand.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 17:43:08 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/11 18:23:20 by mdemare          ###   ########.fr       */
+/*   Created: 2025/03/11 22:32:56 by mdemare           #+#    #+#             */
+/*   Updated: 2025/03/11 22:32:59 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
-
-void	ft_mlx_pixel_put(t_img_data *data, int x, int y, int color)
+double	ft_rand(void)
 {
-	char	*dst;
+	static unsigned int	seed = 123456789;
 
-	if (!data || !data->addr)
-		return ;
-	dst = data->addr + (y * data->line_length + x * (data->bits_per_pixel / 8));
-	*(unsigned int *)dst = color;
+	seed = (1664525 * seed + 1013904223);
+	return ((double)seed / 4294967295.0);
 }

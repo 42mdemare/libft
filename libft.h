@@ -6,7 +6,7 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:04:47 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/11 22:33:19 by mdemare          ###   ########.fr       */
+/*   Updated: 2025/03/12 22:13:05 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -298,6 +298,14 @@ typedef struct s_img_data
 }	t_img_data;
 
 void			ft_mlx_pixel_put(t_img_data *data, int x, int y, int color);
+
+//ft_color.c
+int				ft_get_background_pixel(t_img_data *img, int x, int y);
+unsigned int	ft_get_pixel_color(t_img_data *texture, int x, int y);
+unsigned int	ft_blend_colors_sqrt(unsigned int col1,
+					unsigned int col2, double ratio);
+unsigned int	ft_blend_colors_linear(unsigned int col1,
+					unsigned int col2, double ratio);
 
 typedef struct s_draw
 {

@@ -211,9 +211,15 @@ typedef struct s_light
 ### Aléatoire (`ft_rand.c`)
 - `double	ft_rand(void)` : Génère un nombre pseudo aléatoire.
 
+### Couleurs (`ft_color.c`)
+- `ft_get_background_pixel(t_img_data *img, int x, int y)` : Récupère la couleur d'un pixel en arrière-plan à partir d'une image.
+- `ft_get_pixel_color(t_img_data *texture, int x, int y)` : Récupère la couleur d'un pixel dans une texture.
+- `ft_blend_colors_sqrt(unsigned int col1, unsigned int col2, double ratio)` : Mélange deux couleurs en utilisant une interpolation quadratique (sqrt) pour un rendu plus réaliste mais plus lent.
+- `ft_blend_colors_linear(unsigned int col1, unsigned int col2, double ratio)` : Mélange deux couleurs en utilisant une interpolation linéaire, beaucoup plus rapide mais moins réaliste.
+
 ### Mathématiques (`ft_math.c`)
 - `ft_sqrt(double number)` : Calcule la racine carrée d'un nombre.
-- `ft_pow(double base, int exp))` : Calcule la puissance d'une base élevée à un exposant.
+- `ft_pow(double base, int exp)` : Calcule la puissance d'une base élevée à un exposant.
 - `ft_clamp(double value, double min, double max)` : Contraint une valeur entre un minimum et un maximum.
 - `ft_fabs(double x)` : Retourne la valeur absolue d'un nombre flottant.
 - `ft_lerp(double a, double b, double t)` : Effectue une interpolation linéaire entre deux valeurs.

@@ -282,6 +282,7 @@ typedef struct s_light
 - `ft_print_char` : Affiche un caractère (ft_print_char).
 - `ft_print_str` : Affiche une chaîne de caractères (ft_print_str).
 - `ft_print_tab` : Affiche un tableau de chaînes de caractères (ft_print_tab).
+- `ft_print_tab_int` : Affiche un tableau de int (ft_print_tab_int).
 
 ---
 

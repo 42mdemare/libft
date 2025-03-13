@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ahoizai <ahoizai@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:04:47 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/12 22:13:05 by mdemare          ###   ########.fr       */
+/*   Updated: 2025/03/13 12:47:44 by ahoizai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ int				ft_print_hex(unsigned int number, int upper_case);
 int				ft_print_ptr(unsigned long ptr, int first);
 int				ft_print_unsigned(unsigned int n);
 void			ft_print_tab(char **tab);
+void			ft_print_tab_int(int **tab);
 
 //ft_put
 void			ft_putchar_fd(char c, int fd);

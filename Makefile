@@ -45,6 +45,7 @@ SRCS_LST = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 SRCS_FT_PRINTF_DIR = ft_printf/
 SRCS_FT_PRINTF = ft_print_char.c ft_print_hex.c ft_print_nbr.c ft_print_str.c \
 				 ft_print_unsigned.c ft_printf.c ft_print_ptr.c ft_print_tab.c \
+				 ft_print_tab_int.c
 
 SRCS_GET_NEXT_LINE_DIR = get_next_line/
 SRCS_GET_NEXT_LINE = get_next_line.c get_next_line_utils.c \

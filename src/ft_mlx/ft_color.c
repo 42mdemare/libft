@@ -6,7 +6,7 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 21:58:58 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/12 22:12:45 by mdemare          ###   ########.fr       */
+/*   Updated: 2025/03/13 23:48:15 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,22 @@ unsigned int	ft_blend_colors_linear(unsigned int col1,
 	result.b = (1 - ratio) * c1.b + ratio * c2.b;
 	result.a = (1 - ratio) * c1.a + ratio * c2.a;
 	return (ft_color_to_hex(&result));
+}
+
+unsigned int	ft_adjust_brightness(unsigned int color, double factor)
+{
+	int	r;
+	int	g;
+	int	b;
+
+	r = ((color >> 16) & 0xFF) * factor;
+	g = ((color >> 8) & 0xFF) * factor;
+	b = (color & 0xFF) * factor;
+	if (r > 255)
+		r = 255;
+	if (g > 255)
+		g = 255;
+	if (b > 255)
+		b = 255;
+	return ((r << 16) | (g << 8) | b);
 }

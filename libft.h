@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahoizai <ahoizai@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:04:47 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/13 12:47:44 by ahoizai          ###   ########.fr       */
+/*   Updated: 2025/03/13 23:48:40 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -307,6 +307,7 @@ unsigned int	ft_blend_colors_sqrt(unsigned int col1,
 					unsigned int col2, double ratio);
 unsigned int	ft_blend_colors_linear(unsigned int col1,
 					unsigned int col2, double ratio);
+unsigned int	ft_adjust_brightness(unsigned int color, double factor);
 
 typedef struct s_draw
 {

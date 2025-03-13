@@ -216,6 +216,7 @@ typedef struct s_light
 - `ft_get_pixel_color(t_img_data *texture, int x, int y)` : Récupère la couleur d'un pixel dans une texture.
 - `ft_blend_colors_sqrt(unsigned int col1, unsigned int col2, double ratio)` : Mélange deux couleurs en utilisant une interpolation quadratique (sqrt) pour un rendu plus réaliste mais plus lent.
 - `ft_blend_colors_linear(unsigned int col1, unsigned int col2, double ratio)` : Mélange deux couleurs en utilisant une interpolation linéaire, beaucoup plus rapide mais moins réaliste.
+- `ft_adjust_brightness(unsigned int color, double factor)` : Ajuste la luminosité d'une couleur en multipliant chaque composante (R, G, B) par un facteur donné, tout en s'assurant que les valeurs restent dans la plage valide (0-255).
 
 ### Mathématiques (`ft_math.c`)
 - `ft_sqrt(double number)` : Calcule la racine carrée d'un nombre.

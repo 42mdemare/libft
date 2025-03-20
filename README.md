@@ -216,7 +216,8 @@ typedef struct s_light
 - `ft_get_pixel_color(t_img_data *texture, int x, int y)` : Récupère la couleur d'un pixel dans une texture.
 - `ft_blend_colors_sqrt(unsigned int col1, unsigned int col2, double ratio)` : Mélange deux couleurs en utilisant une interpolation quadratique (sqrt) pour un rendu plus réaliste mais plus lent.
 - `ft_blend_colors_linear(unsigned int col1, unsigned int col2, double ratio)` : Mélange deux couleurs en utilisant une interpolation linéaire, beaucoup plus rapide mais moins réaliste.
-- `ft_adjust_brightness(unsigned int color, double factor)` : Ajuste la luminosité d'une couleur en multipliant chaque composante (R, G, B) par un facteur donné, tout en s'assurant que les valeurs restent dans la plage valide (0-255).
+- `apply_transparency(t_img_data *img, t_vector_int pos, double alpha, int color)` : Ajuste la luminosité d'une couleur en multipliant chaque composante (R, G, B) par un facteur donné, tout en s'assurant que les valeurs restent dans la plage valide (0-255).
+- `apply_transparency(t_img_data *img, t_vector_int pos, double alpha, int color)` : Applique un niveau de transparence.
 
 ### Mathématiques (`ft_math.c`)
 - `ft_sqrt(double number)` : Calcule la racine carrée d'un nombre.
@@ -335,6 +336,9 @@ typedef struct s_light
 ### Ft to
 - `ft_atoi` : Convertit une chaîne de caractères en entier en tenant compte des espaces et du signe.
 - `ft_atol` : Convertit une chaîne de caractères en long entier.
+- `ft_itoa` : Convertit un entier en chaîne de caractères.
+- `ft_dtoa` : Convertit un double en chaîne de caractères.
+- `ft_ftoa` : Convertit un float en chaîne de caractères.
 - `ft_hex_to_uint` : Convertit une chaîne hexadécimale en un entier non signé.
 - `ft_int_to_rgb` : Convertit un entier en format couleur RGB.
 - `ft_numlen` : Retourne la longueur d'un nombre sous forme de chaîne.

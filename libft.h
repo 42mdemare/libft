@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ahoizai <ahoizai@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:04:47 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/13 23:48:40 by mdemare          ###   ########.fr       */
+/*   Updated: 2025/03/19 18:21:48 by ahoizai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,12 +130,14 @@ int				ft_tablen(char **tab);
 int				ft_atoi(const char *nptr);
 long			ft_atol(const char *str);
 char			*ft_itoa(int n);
+char			*ft_dtoa(double num);
+char			*ft_ftoa(float num);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 
 //get_next_line
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 128
+#  define BUFFER_SIZE 1
 # endif
 
 # define FD_MAX 1024
@@ -297,6 +299,15 @@ typedef struct s_img_data
 	int		width;
 	int		height;
 }	t_img_data;
+
+typedef struct s_vector_int
+{
+	int	x;
+	int	y;
+}	t_vector_int;
+
+unsigned int	apply_transparency(t_img_data *img,
+					t_vector_int pos, double alpha, int color);
 
 void			ft_mlx_pixel_put(t_img_data *data, int x, int y, int color);
 

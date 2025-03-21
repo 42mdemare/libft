@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahoizai <ahoizai@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:04:47 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/19 18:21:48 by ahoizai          ###   ########.fr       */
+/*   Updated: 2025/03/20 23:22:40 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -289,7 +289,7 @@ double			ft_compute_lighting(t_vector3 point,
 					t_vector3 normal, t_light light);
 
 // ft_mlx_pixel_put.c
-typedef struct s_img_data 
+typedef struct s_img_data
 {
 	void	*img;
 	char	*addr;

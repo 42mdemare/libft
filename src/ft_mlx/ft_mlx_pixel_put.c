@@ -6,7 +6,7 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:43:08 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/11 18:23:20 by mdemare          ###   ########.fr       */
+/*   Updated: 2025/03/21 05:22:10 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	ft_mlx_pixel_put(t_img_data *data, int x, int y, int color)
 
 	if (!data || !data->addr)
 		return ;
-	dst = data->addr + (y * data->line_length + x * (data->bits_per_pixel / 8));
+	dst = data->addr + (y * data->line_length + x
+			* (data->bits_per_pixel >> 3));
 	*(unsigned int *)dst = color;
 }

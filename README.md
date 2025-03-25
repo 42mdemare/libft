@@ -210,6 +210,7 @@ typedef struct s_light
 ---
 ### Aléatoire (`ft_rand.c`)
 - `double	ft_rand(void)` : Génère un nombre pseudo aléatoire.
+- `int		ft_random_range(int min, int max)` : Génère un nombre pseudo aléatoire entre min et max.
 
 ### Couleurs (`ft_color.c`)
 - `ft_get_background_pixel(t_img_data *img, int x, int y)` : Récupère la couleur d'un pixel en arrière-plan à partir d'une image.

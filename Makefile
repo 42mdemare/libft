@@ -7,7 +7,7 @@ SRCS_DIR = src/
 
 SRCS_MLX_DIR = ft_mlx/
 SRCS_MLX =  ft_light.c ft_math.c ft_matrix4_rotate.c ft_matrix4.c ft_ray_object.c ft_ray.c ft_vector_calc.c ft_vector.c \
-			ft_vector3_calc.c ft_vector3.c ft_mlx_pixel_put.c ft_rand.c ft_color.c ft_apply_transparency.c
+			ft_vector3_calc.c ft_vector3.c ft_mlx_pixel_put.c ft_rand.c ft_color.c ft_apply_transparency.c ft_random_range.c 
 
 SRCS_FREE_DIR = ft_free/
 SRCS_FREE = ft_free_var.c ft_free_tab.c \

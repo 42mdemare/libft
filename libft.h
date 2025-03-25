@@ -6,7 +6,7 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:04:47 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/20 23:22:40 by mdemare          ###   ########.fr       */
+/*   Updated: 2025/03/25 19:41:51 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -331,5 +331,6 @@ typedef struct s_draw
 }	t_draw;
 
 double			ft_rand(void);
+int				ft_random_range(int min, int max);
 
 #endif

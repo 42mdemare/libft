@@ -6,7 +6,7 @@
 /*   By: mdemare <mdemare@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 16:49:09 by mdemare           #+#    #+#             */
-/*   Updated: 2025/03/19 16:49:22 by mdemare          ###   ########.fr       */
+/*   Updated: 2025/03/28 04:15:37 by mdemare          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	*ft_ftoa(float num)
 	int			is_neg;
 	char		*str;
 
-	str = (char *)malloc(32);
+	str = (char *)ft_calloc(32, 1);
 	if (!str)
 		return (NULL);
 	is_neg = (num < 0);
